@@ -9,9 +9,12 @@ export default function AddMovies() {
     }
     const _addMovies=()=>{
       //const allMovies=movies.concat({id:movies.length+1,...newMovies});
-      const allMovies=[...movies,{id:movies.length+1,...newMovies}];
-      setMovies(allMovies);
-      console.log(allMovies)
+      //const allMovies=[...movies,{id:movies.length+1,...newMovies}];
+      //setMovies(allMovies);
+     // console.log(allMovies)
+
+    const newMovie={id:movies.length+1,...newMovies};
+    setMovies({type:"ADD_MOVIES", payload:newMovie});
     }
     
     return (
